@@ -1,8 +1,11 @@
 package telran.data;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private int age;
+
+    public Person() {
+    }
 
     public Person(String name, int age) {
         this.name = name;
@@ -15,5 +18,10 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return Integer.compare(age, o.getAge());
     }
 }
