@@ -1,0 +1,91 @@
+*
+{
+ margin: 0px; 
+ padding: 0px; 
+ color: black; 
+ font-family: sans-serif;
+}
+
+body{
+    background-image: url("/images/film.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#mama{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    background: white;
+}
+
+header{
+    height: 120px;
+    display: flex;
+    background: silver;
+}
+
+#content{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#logo{
+    width: 30%;
+    height: 100%;
+    background: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 2em;
+}
+
+#top{
+
+    font-size: 1.5em;
+}
+
+nav{
+    height: 60px;
+    background: black;
+    position: relative;
+}
+
+.topnav a{
+    float: right;
+    color:#f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.topnav a:hover{
+    background: silver;
+}
+
+#content{
+    display: flex;
+    padding: 5px;
+    background: yellow;
+}
+
+.box{
+    width: 50%;
+    padding: 5px;
+    margin: 3px;
+    border: solid 1px black;
+}
+
+#szena img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
