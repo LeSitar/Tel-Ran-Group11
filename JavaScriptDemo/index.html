@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptDemo</title>
+    <style type = "text/css">
+    #text{
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        margin: 30px 0px 0px 0px;
+    }
+    p{
+        text-align: center;
+    }
+
+    #clickButton{
+        width: 100px;
+        height: 40px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        background-color: black;
+        color: cornsilk;
+    }
+
+    #element{
+        width: 60px;
+        height: 60px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        background-color: lawngreen;
+    }
+
+    </style>
+</head>
+<body>
+<p id = "text">YESSSSSSSS!!!!!</p>
+<button id="clickButton">click me!</button>
+<p>you clicked: </p>
+<p id="times">0</p>
+<p>times</p>
+
+<div id = "element"></div>
+<div id = "btnDiv" style="text-align: center; margin-top: 30px;">
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</div>
+
+ <script>  // zoom and change Text
+     var text = document.getElementById("text");
+     text.addEventListener("mouseover", zoom);
+     text.addEventListener("mouseout", changeText);
+
+     function zoom(){
+         text.style.fontSize = "36px";
+         text.innerHTML = "YESSSSSSSS!!!!!";
+         text.style.color = "red";
+     };
+
+     function changeText(){
+         text.innerHTML = "Uuuuuups....";
+         text.style.fontSize = "18px";
+         text.style.color = "black";
+     };
+
+ </script>
+
+ <script>  //count Click
+    var clickButton = document.getElementById("clickButton");
+    var countOutput = document.getElementById("times");
+    clickButton.addEventListener("click", countClick);
+    var count = 0;
+
+    function countClick(){
+        count++;
+        countOutput.innerHTML = count;
+    };
+
+ </script>
+ <script> //change element form
+    var element = document.getElementById("element");
+    var start = document.getElementById("start");
+    var stopBtn = document.getElementById("stop");
+
+    start.addEventListener("click", changeForm);
+    stopBtn.addEventListener("click", stopped);
+
+    var a;
+
+    function changeForm(){
+        var bRadius = ["10%","20%","30%","40%","50%","0%"];
+        var i = 0;
+        a = setInterval(animationCnahge, 300);
+        function animationCnahge(){
+            i++;
+            element.style.borderRadius = bRadius[i];
+            if(i==5){
+                i=0;
+            };
+        };
+    };
+
+    function stopped(){
+        clearInterval(a);
+    };
+
+ </script>
+</body>
+</html>
